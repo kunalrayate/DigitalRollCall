@@ -31,9 +31,8 @@ public class UserController {
 
 	@PostMapping("/login-user")
 	public User loginUser(@RequestBody LoginRequest request) {
-		
-		return service.loginUser(request);
 
+		return service.loginUser(request);
 	}
 
 	@CrossOrigin(methods = RequestMethod.POST)
@@ -45,7 +44,6 @@ public class UserController {
 		} else {
 			return new ResponseEntity<Integer>(3, HttpStatus.OK);
 		}
-
 	}
 
 	@GetMapping("/get-user-by-username/{username}")
@@ -59,15 +57,15 @@ public class UserController {
 		return service.getAllUser();
 
 	}
-	
+
 	@GetMapping("/get-all-admin")
-	public List<User> getAllAdmins(){
-	return service.getAllAdmins();
+	public List<User> getAllAdmins() {
+		return service.getAllAdmins();
 	}
-	
+
 	@GetMapping("/get-all-faculty")
-	public List<User> getAllFaculties(){
-	return service.getAllFaculties();
+	public List<User> getAllFaculties() {
+		return service.getAllFaculties();
 	}
 
 	@DeleteMapping("/delete-user-by-username")
